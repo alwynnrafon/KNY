@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kaya Natin Youth – Application Form</title>
+  <link rel="icon" type="image/png" href="Pictures/Logo_New.png">
+  <link rel="stylesheet" href="Apply.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <img src="Pictures/Logo_Name.png" alt="Logo" class="logo">
+    <div class="hamburger" id="hamburger">
+    <svg xmlns="http://www.w3.org/2000/svg" 
+        width="30" height="30" viewBox="0 0 24 24" fill="none" 
+        stroke="currentColor" stroke-width="2" 
+        stroke-linecap="round" stroke-linejoin="round">
+      <line x1="3" y1="6" x2="21" y2="6" />
+      <line x1="3" y1="12" x2="21" y2="12" />
+      <line x1="3" y1="18" x2="21" y2="18" />
+    </svg>
+    </div>
+    <div class="nav-links">
+      <a href="Main.html">Home</a>
+      <a href="Main.html#headlines">What's On</a>
+      <a href="Main.html#join">Join the Team</a>
+      <a href="Main.html#about">About Us</a>
+    </div>
+  </nav>
+
+  <!-- Application Form Section -->
+  <section id="application">
+    <div class="form-container">
+      <h2>Application Form</h2>
+      <p>Fill out the form below to apply and become part of Kaya Natin Youth.</p>
+      
+      <form action="#" method="post" class="app-form">
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="fname" required>
+
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lname" required>
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="09xxxxxxxxx" required>
+
+        <label for="age">Age</label>
+        <input type="number" id="age" name="age" min="12" max="100" required>
+
+        <label for="address">Address</label>
+        <textarea id="address" name="address" rows="3" required></textarea>
+
+        <label for="reason">Why do you want to join?</label>
+        <textarea id="reason" name="reason" rows="4" required></textarea>
+
+        <button type="submit">Submit Application</button>
+      </form>
+    </div>
+  </section>
+<script>
+//hamburger
+      const hamburger = document.querySelector(".hamburger");
+  const navLinks = document.querySelector(".nav-links");
+
+  hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    navLinks.classList.toggle("show");
+  });
+
+
+//scrolling to//
+  window.addEventListener("scroll", function () {
+    const nav = document.querySelector("nav");
+    if (window.scrollY > 50) { 
+      nav.classList.add("scrolled");
+    } else {
+      nav.classList.remove("scrolled");
+    }
+  });
+</script>
+
+</body>
+</html>

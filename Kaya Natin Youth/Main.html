@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kaya Natin Youth</title>
+  <link rel="icon" type="image/png" href="Pictures/Logo_New.png">
+  <link rel="stylesheet" href="Main.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+    <img id="logo" src="Pictures/Logo_Name.png" class="logo">
+    <div class="hamburger" id="hamburger">
+    <svg xmlns="http://www.w3.org/2000/svg" 
+        width="30" height="30" viewBox="0 0 24 24" fill="none" 
+        stroke="currentColor" stroke-width="2" 
+        stroke-linecap="round" stroke-linejoin="round">
+      <line x1="3" y1="6" x2="21" y2="6" />
+      <line x1="3" y1="12" x2="21" y2="12" />
+      <line x1="3" y1="18" x2="21" y2="18" />
+    </svg>
+    </div>
+
+    <div class="nav-links">
+      <a href="#Home">Home</a> 
+      <a href="#headlines">What's On</a> 
+      <a href="#join">Join the Team</a> 
+      <a href="#about">About Us</a> 
+      <a href="#" id="openLogin">Login</a>
+    </div>
+  </nav>
+
+  <!-- Home Section -->
+  <section id="Home">
+    <img src="Pictures/back.png" alt="Front Image" style="width:100vw; height:100vh; object-fit:cover;">
+  </section>
+
+  <!-- Headlines Section -->
+  <section id="headlines">
+  <h2>What's On</h2>
+  <div class="slideshow-container">
+
+    <!-- Slide 1 -->
+    <div class="mySlide fade">
+      <img src="Event/event1.jpg" alt="Story 1">
+      <div class="caption">Story 1: Community Outreach Program</div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="mySlide fade">
+      <img src="Event/event1.jpg" alt="Story 2">
+      <div class="caption">Story 2: Youth Leadership Workshop</div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="mySlide fade">
+      <img src="Event/event1.jpg" alt="Story 3">
+      <div class="caption">Story 3: Tree Planting Activity</div>
+    </div>
+
+    <!-- Slide 4 -->
+    <div class="mySlide fade">
+      <img src="Event/event1.jpg" alt="Story 4">
+      <div class="caption">Story 4: Fundraising Concert</div>
+    </div>
+
+    <!-- Navigation arrows -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+  </div>
+
+  <!-- Dots -->
+  <div class="dots">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+  </div>
+</section>
+
+
+  <!-- News Section -->
+  <section id="join">
+    <img src="Pictures/Logo.jpg" alt="Join the Team">
+    <div class="content">
+      <h2>Join the Team</h2>
+      <p>Be part of our growing community and contribute to our mission.</p>
+      <button onclick="window.location.href='apply.html'">Apply Now</button>
+    </div>
+  </section>
+
+  <!-- about Section -->
+  <section id="about">
+  <h2>About Us</h2>
+  <p>
+    Kaya Natin Youth is a movement of young Filipinos who believe in the power of good governance, ethical leadership, and active citizenship. We are a community built on the idea that change starts with the youth, and that every Filipino has the ability to make a positive impact in society when guided by integrity, compassion, and service.
+  </p>
+  <p>
+    Our mission is to inspire and empower the next generation of leaders by providing opportunities for education, advocacy, and community engagement. Through workshops, outreach programs, and collaborative projects, we aim to develop the values of responsibility, inclusiveness, and accountability among the youth.
+  </p>
+  <p>
+    As part of the larger Kaya Natin! movement for good governance, Kaya Natin Youth continues to champion initiatives that strengthen communities, amplify youth voices, and encourage active participation in nation-building. We believe that real change is possible when young people are equipped with the right knowledge, skills, and support system to become servant leaders.
+  </p>
+  <p>
+    In Kaya Natin Youth, we stand together with the dream of a better Philippines—one where honesty, transparency, and unity are at the heart of leadership. By working hand in hand, we strive to create opportunities that allow young people not just to imagine a brighter future, but to build it.
+  </p>
+</section>
+
+
+  <!-- Socials Section -->
+<section id="socials">
+   <div class="social-icons">
+    <a href="https://www.facebook.com/knycamarinesnorte" target="_blank">
+      <img src="Logo/fblogo.svg" alt="Facebook" />
+    </a>
+    <a href="https://www.facebook.com/messages/t/658484904023055" target="_blank">
+      <img src="Logo/messlogo.svg" alt="Messenger" />
+    </a>
+    <a href="https://www.instagram.com/kny.camnorte/" target="_blank">
+      <img src="Logo/iglogo.svg" alt="Instagram" />
+    </a>
+  </div>
+  <p><strong>Kaya Natin Youth - Camarines Norte</strong></p>
+  <p>Email Address: knycamnorte@gmail.com</p>
+  <p>Daet, Philippines, 4600</p>
+</section>
+
+  <!-- Login Modal -->
+  <div id="loginModal" class="modal">
+    <div class="modal-content two-column">
+      <div class="modal-image">
+        <img src="Pictures/modalpic.png" alt="Login">
+      </div>
+      <div class="modal-form">
+        <span class="close">&times;</span>
+        <h2>Login</h2>
+        <form>
+          <input type="email" placeholder="Email" required><br>
+          <input type="password" placeholder="Password" required><br>
+          <button type="submit">Login</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    //hamburger
+      const hamburger = document.querySelector(".hamburger");
+  const navLinks = document.querySelector(".nav-links");
+
+  hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    navLinks.classList.toggle("show");
+  });
+
+    // Navbar Scroll Effect
+    window.addEventListener("scroll", function() {
+      const nav = document.querySelector("nav");
+      if (window.scrollY > 0) {
+        nav.classList.add("scrolled");
+      } else {
+        nav.classList.remove("scrolled");
+      }
+    });
+
+    // Modal Handling
+    const loginModal = document.getElementById("loginModal");
+    const openLogin = document.getElementById("openLogin");
+    const closeBtns = document.querySelectorAll(".close");
+
+    // Open Login Modal
+    openLogin.onclick = function(e) {
+      e.preventDefault();
+      loginModal.style.display = "flex";
+    }
+
+    // Close Login Modal
+    closeBtns.forEach(btn => {
+      btn.onclick = function() {
+        loginModal.style.display = "none";
+      }
+    });
+
+    // Close when clicking outside
+    window.onclick = function(e) {
+      if (e.target === loginModal) loginModal.style.display = "none";
+    }
+
+    //slides
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlide");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+
+// Auto slide every 5 seconds
+setInterval(() => { plusSlides(1); }, 5000);
+
+  </script>
+</body>
+</html>
